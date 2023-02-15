@@ -1,0 +1,126 @@
+@inproceedings{ICCAD20_damo,
+  title={{DAMO}: Deep Agile Mask Optimization for Full Chip Scale},
+  author={Chen, Guojin and Chen, Wanli and Ma, Yuzhe and Yang, Haoyu and Yu, Bei},
+  booktitle={Proceedings of the 39th International Conference on Computer-Aided Design,  (\textbf{ICCAD '20})},
+  _venue={ICCAD},
+  pages={1--9},
+  year={2020},
+  month = {11},
+  doi = {0.1145/3400302.3415705},
+  url = {https://www.cse.cuhk.edu.hk/~byu/papers/C104-ICCAD2020-DAMO.pdf},
+  abstract = {Continuous scaling of the VLSI system leaves a great challenge on manufacturing and optical proximity correction (OPC) is widely applied in conventional design flow for manufacturability optimization. Traditional techniques conducted OPC by leveraging a lithography model and suffered from prohibitive computational overhead, and mostly focused on optimizing a single clip without addressing how to tackle the full chip. In this paper, we present DAMO, a high performance and scalable deep learning-enabled OPC system for full chip scale. It is an end-to-end mask optimization paradigm which contains a Deep Lithography Simulator (DLS) for lithography modeling and a Deep Mask Generator (DMG) for mask pattern generation. Moreover, a novel layout splitting algorithm customized for DAMO is proposed to handle the full chip OPC problem. Extensive experiments show that DAMO outperforms the state-of-the-art OPC solutions in both academia and industrial commercial toolkit.},
+}
+
+@inproceedings{ICCAD21_develset,
+  title={{DevelSet}: Deep Neural Level Set for Instant Mask optimization},
+  author={Chen, Guojin and Yu, Ziyang and Liu, Hongduo and Ma, Yuzhe and Yu, Bei},
+  booktitle={Proceedings of the 40th International Conference on Computer-Aided Design,  (\textbf{ICCAD '21})},
+  pages={1--9},
+  year={2021},
+  _venue = {ICCAD},
+  month = {11},
+  doi = {10.1109/ICCAD51958.2021.9643464},
+  url = {https://www.cse.cuhk.edu.hk/~byu/papers/C124-ICCAD2021-DevelSet.pdf},
+  abstract = {With the feature size continuously shrinking in advanced technology nodes, mask optimization is increasingly crucial in the conventional design flow, accompanied by an explosive growth in prohibitive computational overhead in optical proximity correction (OPC) methods. Recently, inverse lithography technique (ILT) has drawn significant attention and is becoming prevalent in emerging OPC solutions. However, ILT methods are either time-consuming or in weak performance of mask printability and manufacturability. In this paper, we present DevelSet, a GPU and deep neural network (DNN) accelerated level set OPC framework for metal layer. We first improve the conventional level set-based ILT algorithm by introducing the curvature term to reduce mask complexity and applying GPU acceleration to overcome computational bottlenecks. To further enhance printability and fast iterative convergence, we propose a novel deep neural network delicately designed with level set intrinsic principles to facilitate the joint optimization of DNN and GPU accelerated level set optimizer. Experimental results show that DevelSet framework surpasses the state-of-theart methods in printability and boost the runtime performance achieving instant level (around 1 second).}
+}
+
+@inproceedings{DATE21_levelset,
+    author = {Yu, Ziyang
+              and Chen, Guojin
+              and Ma, Yuzhe
+              and Yu, Bei},
+    title = {A GPU-enabled Level Set Method for Mask Optimization},
+    booktitle = {IEEE/ACM Proceedings Design, Automation and Test in Europe, (\textbf{DATE '21})},
+    year = {2020},
+    _venue = {DATE},
+    month = {11},
+    abstract = {As the feature size of advanced integrated circuits keeps shrinking, resolution enhancement technique (RET) is utilized to improve the printability in the lithography process. Optical proximity correction (OPC) is one of the most widely used RETs aiming at compensating the mask to generate a more precise wafer image. In this paper, we put forward a level-set based OPC with high mask optimization quality and fast convergence. In order to suppress the disturbance of the condition fluctuation in lithography process, we propose a new process window-aware cost function. Then, a novel momentum-based evolution technique is adopted, which demonstrates substantial improvement. Moreover, graphics processing unit (GPU) is leveraged for accelerating the proposed algorithm. Experimental results on ICCAD 2013 benchmarks show that our algorithm outperforms all previous OPC algorithms in terms of both solution quality and runtime overhead. }
+}
+
+@inproceedings{ISPD21_learn-pointcloud,
+    author = {Li, Wei
+              and Chen, Guojin
+              and Yang, Haoyu
+              and Chen, Ran
+              and Yu, Bei},
+    title = {Learning Point Clouds in EDA. \textbf{(Invited Paper)}},
+    booktitle = {ACM International Symposium on Physical Design, (\textbf{ISPD '21})},
+    year = {2021},
+    _venue  = {ISPD},
+    month = {03},
+    url = {https://www.cse.cuhk.edu.hk/~byu/papers/C116-ISPD2021-PointCloud.pdf},
+    abstract = {The exploding of deep learning techniques have motivated the development in various fields, including intelligent EDA algorithms from physical implementation to design for manufacturability. Point cloud, defined as the set of data points in space, is one of the most important data representations in deep learning since it directly preserves the original geometric information without any discretization. However, there are still some challenges that stifle the applications of point clouds in the EDA field. In this paper, we first review previous works about deep learning in EDA and point clouds in other fields. Then, we discuss some challenges of point clouds in EDA raised by some intrinsic characteristics of point clouds. Finally, to stimulate future research, we present several possible applications of point clouds in EDA and demonstrate the feasibility by two case studies.}
+}
+
+@inproceedings{ECCV22_hilbert-curve,
+    author = {Chen, Wanli
+              and Zhu, Xinge
+              and Chen, Guojin
+              and Yu, Bei},
+    title = {Efficient Point Cloud Analysis Using Hilbert Curve.},
+    booktitle = {European Conference on Computer Vision, (\textbf{ECCV '22})},
+    _venue = {ECCV},
+    year = {2022},
+    month = {06}
+}
+
+@inproceedings{ICCAD22_AdaOPC,
+  title={{AdaOPC}: A Self-Adaptive Mask Optimization Framework For Real Design Patterns},
+  author={Zhao, Wenqian
+          and Yao, Xufeng
+          and Yu, Ziyang
+          and Chen, Guojin
+          and Ma, Yuzhe
+          and Yu, Bei
+          and Wong, Martin},
+  booktitle={Proceedings of the 41th International Conference on Computer-Aided Design,  (\textbf{ICCAD '22})},
+  pages={},
+  _venue = {ICCAD},
+  year={2022},
+  month = {11},
+}
+
+
+@inproceedings{DAC23_Nitho,
+  title={Physics-Informed Optical Kernel Regression Using Complex-valued Neural Fields},
+  author={Chen, Guojin
+          and Pei, Zehua
+          and Yang, Haoyu
+          and Ma, Yuzhe
+          and Yu, Bei
+          and Wong, Martin
+  },
+  booktitle={ACM/IEEE Design Automation Conference,  (\textbf{DAC '23})},
+  _venue={DAC},
+  year={2023},
+  month = {7},
+}
+
+@inproceedings{DAC23_Diff,
+  title={DiffPattern: Layout Pattern Generation via Discrete Diffusion},
+  author={Wang, Zixiao
+          and Shen, Yunheng
+          and Zhao, Wenqian
+          and Bai, Yang
+          and Chen, Guojin
+          and Farnia, Farzan
+          and Yu, Bei
+  },
+  booktitle={ACM/IEEE Design Automation Conference,  (\textbf{DAC '23})},
+  _venue={DAC},
+  year={2023},
+  month = {7},
+}
+
+
+@inproceedings{SPIE23_GPULD,
+  title={A GPU-accelerated Matrix Cover Algorithm for Multiple Patterning Layout Decomposition},
+  author={Chen, Guojin
+          and Yang, Haoyu
+          and Yu, Bei},
+  booktitle={SPIE,  (\textbf{SPIE '23})},
+  _venue = {SPIE},
+  year={2023},
+  month = {3},
+}
+

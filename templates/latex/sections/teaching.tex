@@ -1,0 +1,10 @@
+~< extends "section.tex" >~
+
+~< block body >~
+~< for item in items >~
+  << item.name >>
+  (<< item.short >>),
+  << item.position >>
+  \hfill << item.semester>> \\
+~< endfor >~
+~< endblock body >~

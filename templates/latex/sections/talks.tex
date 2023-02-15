@@ -1,0 +1,18 @@
+~< extends "section.tex" >~
+
+~< block body >~
+Slides for my major presentations are open-sourced with a CC-BY license at
+\href{https://github.com/bamos/presentations}{bamos/presentations}.
+
+\begin{longtable}[t]{p{.2in}@{\hspace{1mm}}p{6.2in}@{\hspace{1em}}r}
+  ~< for item in items >~
+    \hfill << loop.index >>. & \emph{<< item.title >>},
+    ~< if item.url >~
+      \href{<< item.url >>}{<< item.location >>}
+    ~< else >~
+      << item.location >>
+  ~< endif >~
+  & << item.year >> \\
+  ~< endfor >~
+\end{longtable}
+~< endblock body >~

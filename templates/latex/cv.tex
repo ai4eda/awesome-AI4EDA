@@ -1,0 +1,40 @@
+\documentclass[11pt,letter,sans]{moderncv}
+
+\usepackage{longtable}
+\setlength{\LTleft}{0pt}
+\definecolor{tab_highlight}{HTML}{f0c967}
+
+\moderncvstyle{<< style >>}
+\moderncvcolor{<< color >>}
+\definecolor{color2}{rgb}{<<color2>>}
+
+\usepackage[top=1in, bottom=1in, left=.7in, right=.7in]{geometry}
+
+% Define filled heart symbol
+\DeclareSymbolFont{extraup}{U}{zavm}{m}{n}
+\DeclareMathSymbol{\varheart}{\mathalpha}{extraup}{86}
+
+\usepackage{mathabx} % For \bigstar
+
+\usepackage{lastpage}
+\cfoot{\addressfont\textcolor{gray}{Page \thepage\ of \pageref*{LastPage}}}
+
+\AtEndPreamble{\hypersetup{pdftitle={<< name.first >> << name.last >>: CV}}}
+\name{<< name.first >>}{<< name.last >>}
+\email{<< email >>}
+\homepage{<< url >>}
+\social[linkedin]{<<social.linkedin>>}
+\social[github]{<<social.github>>}
+\extrainfo{\small Last updated on \today}
+
+\AtBeginDocument{\hypersetup{colorlinks}}
+\frenchspacing
+
+\begin{document}
+\hypersetup{allcolors=color1}
+\makecvtitle
+\vspace{-1cm}
+
+<< body >>
+
+\end{document}

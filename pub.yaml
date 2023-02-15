@@ -1,0 +1,119 @@
+name:
+  first: Awesome AI for
+  last: EDA
+email: cgjcuhk@gmail.com
+pdf: /data/pub.pdf
+src: https://github.com/ai4eda/awesome-AI4EDA
+url: "https://ai4eda.github.io"
+social:
+  github: https://github.com/ai4eda/awesome-AI4EDA
+  # linkedin: dekura
+  # google_scholar: 842nSvkAAAAJ
+
+# LaTeX formatting
+style: banking # casual, classic, oldstyle, or banking
+color: blue # blue, orange, green, red, purple, grey and black
+color2: '0.25,0.25,0.25' # Make the font under the name a darker grey.
+
+order:
+  # - [all_publications, Publications]
+  - [categories_publications, Publications]
+  # - [about, NONE]
+
+
+
+categories_publications:
+  name: "All publications"
+  group_by_topic: True
+  categories:
+    -
+      heading: "Design for Manufacutring"
+      file: dfm.bib
+      prefix: ''
+    -
+      heading: "Placement"
+      file: place.bib
+      prefix: ''
+  # file: all.bib
+  sort_bib: True
+  include_image: False
+  group_by_year: False
+  prefix: ''
+  prefix_reverse: True
+  author_urls:
+    'Guojin Chen' : 'https://gjchen.me'
+    'Wanli Chen' : 'https://cwanli.github.io/'
+    'Yuzhe Ma' : 'https://yuzhe630.github.io/'
+    'Haoyu Yang' : 'https://phdyang007.github.io/'
+    'Bei Yu' : 'https://www.cse.cuhk.edu.hk/~byu/'
+    'Ziyang Yu' : 'https://scarecrowyu.github.io/'
+    'Martin Wong' : 'https://scholar.google.com/citations?user=WPhoQiUAAAAJ'
+    'Xinge Zhu' : 'https://xingezhu.me/'
+    'Ran Chen' : 'https://appsrv.cse.cuhk.edu.hk/~rchen/'
+    'Wei Li' : 'https://wadmes.github.io/cv/'
+    'Wenqian Zhao' : 'https://wenqian1228.github.io/'
+    'Xufeng Yao' : 'https://appsrv.cse.cuhk.edu.hk/~xfyao/'
+    'Chunjing Xu' : 'https://scholar.google.com/citations?user=-CJ5LkMAAAAJ'
+    'Yi Zhu' : 'https://yeezhu.github.io/'
+    'Lei Ye' : 'https://noahlab.com.hk/'
+    'Liangjian Wen' : 'https://scholar.google.com/citations?user=jwHflLcAAAAJ'
+    'Jianzhuang Liu' : 'https://scholar.google.com/citations?user=sKauaAwAAAAJ'
+    'Hongduo Liu' : 'https://liuhongduosc.github.io/'
+    'Zehua Pei' : 'https://scholar.google.com/citations?user=FjZurHkAAAAJ'
+    'Zixiao Wang' : 'https://shiningsord.github.io/'
+    'Yunheng Shen' : 'https://shiningsord.github.io/'
+    'Yang Bai' : 'https://ybai62868.github.io/'
+    'Farzan Farnia' : 'https://www.cse.cuhk.edu.hk/people/faculty/farzan-farnia/'
+    'Yibo Lin' : 'https://yibolin.com/'
+    'Shounak Dhar' : 'https://scholar.google.com/citations?user=kc1yV_4AAAAJ'
+    'Haoxing Ren' : 'https://research.nvidia.com/person/mark-ren'
+    'Brucek Khailany' : 'https://research.nvidia.com/person/brucek-khailany'
+    'David Z. Pan' : 'https://users.ece.utexas.edu/~dpan/'
+
+
+
+
+
+# current_position:
+#   - place: CUHK
+#     location: Hong Kong
+#     title: Ph.D. Student
+#     dates: 2021 -- Present
+
+
+
+
+
+# all_publications:
+#   name: "All publications"
+#   file: all.bib
+#   sort_bib: True
+#   include_image: False
+#   group_by_year: False
+#   prefix: ''
+#   prefix_reverse: True
+#   author_urls:
+#     'Guojin Chen' : 'https://gjchen.me'
+#     'Wanli Chen' : 'https://cwanli.github.io/'
+#     'Yuzhe Ma' : 'https://yuzhe630.github.io/'
+#     'Haoyu Yang' : 'https://phdyang007.github.io/'
+#     'Bei Yu' : 'https://www.cse.cuhk.edu.hk/~byu/'
+#     'Ziyang Yu' : 'https://scarecrowyu.github.io/'
+#     'Martin Wong' : 'https://scholar.google.com/citations?user=WPhoQiUAAAAJ'
+#     'Xinge Zhu' : 'https://xingezhu.me/'
+#     'Ran Chen' : 'https://appsrv.cse.cuhk.edu.hk/~rchen/'
+#     'Wei Li' : 'https://wadmes.github.io/cv/'
+#     'Wenqian Zhao' : 'https://wenqian1228.github.io/'
+#     'Xufeng Yao' : 'https://appsrv.cse.cuhk.edu.hk/~xfyao/'
+#     'Chunjing Xu' : 'https://scholar.google.com/citations?user=-CJ5LkMAAAAJ'
+#     'Yi Zhu' : 'https://yeezhu.github.io/'
+#     'Lei Ye' : 'https://noahlab.com.hk/'
+#     'Liangjian Wen' : 'https://scholar.google.com/citations?user=jwHflLcAAAAJ'
+#     'Jianzhuang Liu' : 'https://scholar.google.com/citations?user=sKauaAwAAAAJ'
+#     'Hongduo Liu' : 'https://liuhongduosc.github.io/'
+#     'Zehua Pei' : 'https://scholar.google.com/citations?user=FjZurHkAAAAJ'
+#     'Zixiao Wang' : 'https://shiningsord.github.io/'
+#     'Yunheng Shen' : 'https://shiningsord.github.io/'
+#     'Yang Bai' : 'https://ybai62868.github.io/'
+#     'Farzan Farnia' : 'https://www.cse.cuhk.edu.hk/people/faculty/farzan-farnia/'
+

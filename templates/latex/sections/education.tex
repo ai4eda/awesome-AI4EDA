@@ -1,0 +1,24 @@
+~< extends "section.tex" >~
+
+~< block body >~
+% \vspace{-2mm}
+% \begin{itemize}
+~< for school in items >~
+    % \item 
+  ~< if school.degree >~
+    \textbf{<< school.degree >>}, \emph{<< school.school >>}
+    ~< if school.overallGPA >~
+        (<< school.overallGPA >>)
+    ~< endif >~
+    \hfill << school.dates >> \par
+  ~< endif >~
+  ~< if school.details >~
+    ~< for detail in school.details ->~
+        <<detail>> \par
+    ~< endfor >~
+  ~< endif >~
+  \vspace{3mm}
+~< endfor >~
+% \end{itemize}
+\vspace{-3mm}
+~< endblock body >~
