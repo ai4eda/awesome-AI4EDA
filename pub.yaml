@@ -27,12 +27,16 @@ categories_publications:
   group_by_topic: True
   categories:
     -
-      heading: "Design for Manufacutring"
-      file: dfm.bib
+      heading: "Architechture Design"
+      file: arch.bib
       prefix: ''
     -
       heading: "Placement"
       file: place.bib
+      prefix: ''
+    -
+      heading: "Design for Manufacutring"
+      file: dfm.bib
       prefix: ''
   # file: all.bib
   sort_bib: True
