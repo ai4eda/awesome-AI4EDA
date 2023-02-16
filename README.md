@@ -28,39 +28,30 @@ categories_publications:
     -
       heading: "High Level Synthesis"
       file: hls.bib
-
     -
       heading: "Logic Synthesis"
       file: logicSyn.bib
-
     -
       heading: "Circuit Verification"
       file: circuit.bib
-
     -
       heading: "Placement"
       file: place.bib
-
     -
       heading: "Clock Tree Synthesis"
       file: CTS.bib
-
     -
       heading: "Routing"
       file: routing.bib
-
     -
       heading: "Timing"
       file: timing.bib
-
     -
       heading: "Layout Verification"
       file: layoutVer.bib
-
     -
       heading: "Mask Optimization"
       file: opc.bib
-
 ```
 
 ### Step 2: Add the topic for your pub in the bibtex file.
@@ -73,9 +64,9 @@ the `_venue`, `year`, `topic` fileds are required. You publication will be displ
 
 **Optional Fileds**
 
-You can also add `url` filed to attach the paper link.
-And the `abstract` filed to add the paper abstract.
-Add the `codes`, `slides`, `video` filed for link to your codes, slides, video.
+You can also add `url` or `link` filed to attach the paper link.
+Add the `abstract` filed to show the paper abstract.
+Add the `code_url`, `slides_url`, `video_url`, `talk_url`, `project_url` filed for link to your codes, slides, video, talks, or project pages.
 
 ```bibtex
 @inproceedings{DAC23_Nitho,
@@ -87,9 +78,11 @@ Add the `codes`, `slides`, `video` filed for link to your codes, slides, video.
   topic = {Lithography},
   url = {link to your paper},
   abstract = {abstract of your paper},
-  codes = {link to your codes},
-  slides = {link to your slides},
-  video = {link to your video}
+  code_url = {link to your codes},
+  slides_url = {link to your slides},
+  talk_url = {link to your talk video},
+  video_url = {link to your video},
+  project_url = {link to your project page},
 }
 ```
 

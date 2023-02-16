@@ -42,24 +42,30 @@ def get_pub_md(context, config):
 
     def _format_author_list(immut_author_list):
         formatted_authors = []
+        show_author_url = config["show_author_url"]
         for author in immut_author_list:
             new_auth = author.split(", ")
             assert len(new_auth) == 2
             new_auth = new_auth[1] + " " + new_auth[0]
             author_urls = config['author_urls']
+            if show_author_url:
+                k = list(filter(lambda k: k in new_auth, author_urls.keys()))
+                if len(k) == 0 and config['name'] not in new_auth:
+                    print(f"+ Author URL not found for {new_auth}")
 
-            k = list(filter(lambda k: k in new_auth, author_urls.keys()))
-            if len(k) == 0 and config['name'] not in new_auth:
-                print(f"+ Author URL not found for {new_auth}")
+                new_auth = new_auth.replace(' ', '&nbsp;')
+                if len(k) > 0:
+                    assert len(k) == 1, k
+                    url = author_urls[k[0]]
+                    new_auth = f"<a href='{url}' target='_blank'>{new_auth}</a>"
 
-            new_auth = new_auth.replace(' ', '&nbsp;')
-            if len(k) > 0:
-                assert len(k) == 1, k
-                url = author_urls[k[0]]
-                new_auth = f"<a href='{url}' target='_blank'>{new_auth}</a>"
+                if config['name'] in new_auth:
+                    new_auth = "<strong>" + new_auth + "</strong>"
 
-            if config['name'] in new_auth:
-                new_auth = "<strong>" + new_auth + "</strong>"
+            else:
+                new_auth = new_auth.replace(' ', '&nbsp;')
+                if config['name'] in new_auth:
+                    new_auth = "<strong>" + new_auth + "</strong>"
 
             formatted_authors.append(new_auth)
         return formatted_authors
@@ -91,11 +97,16 @@ def get_pub_md(context, config):
         if 'link' in pub:
             img_str = "<a href=\'{}\' target='_blank'>{}</a> ".format(
                 pub['link'], img_str)
-            title = "<a href=\'{}\' target='_blank'>{}</a> ".format(
-                pub['link'], title)
+            # title = "<a href=\'{}\' target='_blank'>{}</a> ".format(
+                # pub['link'], title)
+            # title = "<a href=\'{}\' target='_blank'>{}</a> ".format(
+            #     pub['link'], title)
+            links.append(
+                "[<a href=\'{}\' target='_blank'>paper</a>] ".format(pub['link'])
+            )
 
-        for base in ['code', 'slides', 'talk']:
-            key = base + 'url'
+        for base in ['code', 'slides', 'talk', 'video', 'project']:
+            key = base + '_url'
             if key in pub:
                 links.append(
                     "[<a href=\'{}\' target='_blank'>{}</a>] ".format(
@@ -123,7 +134,7 @@ def get_pub_md(context, config):
 </td>
 <td>
 {img_str}
-<em>{title}</em> {links}<br>
+{title} {links}<br>
 {author_str}<br>
 {year_venue} {note_str} <br>
 {abstract}
@@ -137,8 +148,8 @@ def get_pub_md(context, config):
 {prefix}{gidx}.
 </td>
 <td>
-    <em>{title}</em> {links}<br>
-    {author_str}<br>
+    {title} {links}<br>
+    <em>{author_str}</em><br>
     {year_venue} {note_str} <br>
     {abstract}
 </td>
@@ -167,9 +178,11 @@ def get_pub_md(context, config):
         for category in config['categories']:
             type_content = {}
             type_content['title'] = category['heading']
-
             pubs = load_and_replace(category['file'])
-
+            if 'prefix' in category:
+                prefix = category['prefix']
+            else:
+                prefix = config['prefix']
 
             if group_by_topic:
                 all_topics = []
@@ -203,7 +216,7 @@ def get_pub_md(context, config):
                     if sort_bib:
                         topic_pubs = sorted(topic_pubs, key=lambda pub: int(pub['year']), reverse=True)
                     for i, pub in enumerate(topic_pubs):
-                        details += _get_pub_str(pub, category['prefix'], i + 1, include_image=include_image) + sep
+                        details += _get_pub_str(pub, prefix, i + 1, include_image=include_image) + sep
                     details += '</table>\n'
             else:
                 details = ""
@@ -213,8 +226,7 @@ def get_pub_md(context, config):
                 if sort_bib:
                     pubs = sorted(pubs, key=lambda pub: int(pub['year']), reverse=True)
                 for i, pub in enumerate(pubs):
-                    details += _get_pub_str(pub, category['prefix'],
-                                            i + 1, include_image=include_image) + sep
+                    details += _get_pub_str(pub, prefix, i + 1, include_image=include_image) + sep
                 details += '</table>\n'
             type_content['details'] = details
             type_content['file'] = category['file']

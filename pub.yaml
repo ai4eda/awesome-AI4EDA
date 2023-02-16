@@ -27,39 +27,30 @@ categories_publications:
     -
       heading: "High Level Synthesis"
       file: hls.bib
-      prefix: ''
     -
       heading: "Logic Synthesis"
       file: logicSyn.bib
-      prefix: ''
     -
       heading: "Circuit Verification"
       file: circuit.bib
-      prefix: ''
     -
       heading: "Placement"
       file: place.bib
-      prefix: ''
     -
       heading: "Clock Tree Synthesis"
       file: CTS.bib
-      prefix: ''
     -
       heading: "Routing"
       file: routing.bib
-      prefix: ''
     -
       heading: "Timing"
       file: timing.bib
-      prefix: ''
     -
       heading: "Layout Verification"
       file: layoutVer.bib
-      prefix: ''
     -
       heading: "Mask Optimization"
       file: opc.bib
-      prefix: ''
 
   # file: all.bib
   sort_bib: True
@@ -67,6 +58,7 @@ categories_publications:
   group_by_year: False
   prefix: ''
   prefix_reverse: True
+  show_author_url: False
   author_urls:
     'Guojin Chen' : 'https://gjchen.me'
     'Wanli Chen' : 'https://cwanli.github.io/'
