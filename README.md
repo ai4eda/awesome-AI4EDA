@@ -17,13 +17,30 @@ It can **automatically** render the plain `bibtex` file into `html` for display 
 
 We provide different categories according to the EDA flow, please copy your bibtex to the corresponding category.
 
-| Category                 | File        | notes |
-| ------------------------ | ----------- | ----- |
-| Architechture Design     | `arch.bib`  |       |
-| Placement                | `place.bib` |       |
-| Design for Manufacutring | `dfm.bib`   |       |
+<table>
+    <tr>
+        <td>Category</td>
+        <td>File</td>
+        <td>notes</td>
+    </tr>
+    <tr>
+        <td>Architechture Design</td>
+        <td>`arch.bib`</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Placement</td>
+        <td>`place.bib`</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Design for Manufacutring</td>
+        <td>`dfm.bib`</td>
+        <td></td>
+    </tr>
+</table>
 
-The categories are defined in `pub.yaml`, you can also submit new categories to `pub.yaml` or contact [cgjcuhk@gmail.com](mailto:cgjcuhk@gmail.com) to help you add the categories. 
+The categories are defined in `pub.yaml` of repo:[awesome-AI4EDA](https://github.com/ai4eda/awesome-AI4EDA), you can also submit new categories to `pub.yaml` or contact [cgjcuhk@gmail.com](mailto:cgjcuhk@gmail.com) to help you add the categories.
 
 ```yaml
 # pub.yaml
@@ -49,6 +66,9 @@ categories_publications:
 
 Example: 👇🏻 the `_venue`, `year`, `topic` fileds are required. You publication will be displayed into the corresponding topic.
 
+You can also add `url` filed to attach the paper link. 
+And the `abstract` filed to add the paper abstract.
+
 ```bibtex
 @inproceedings{DAC23_Nitho,
   title={Physics-Informed Optical Kernel Regression Using Complex-valued Neural Fields},
@@ -57,6 +77,8 @@ Example: 👇🏻 the `_venue`, `year`, `topic` fileds are required. You publica
   _venue={DAC},
   year={2023},
   topic = {Lithography},
+  url = {link to your paper},
+  abstract = {abstract of your paper}
 }
 ```
 
