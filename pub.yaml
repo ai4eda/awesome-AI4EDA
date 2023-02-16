@@ -7,8 +7,6 @@ src: https://github.com/ai4eda/awesome-AI4EDA
 url: "https://ai4eda.github.io"
 social:
   github: https://github.com/ai4eda/awesome-AI4EDA
-  # linkedin: dekura
-  # google_scholar: 842nSvkAAAAJ
 
 # LaTeX formatting
 style: banking # casual, classic, oldstyle, or banking
@@ -27,17 +25,38 @@ categories_publications:
   group_by_topic: True
   categories:
     -
-      heading: "Architechture Design"
-      file: arch.bib
+      heading: "High Level Synthesis"
+      file: hls.bib
+      prefix: ''
+    -
+      heading: "Logic Synthesis"
+      file: logicSyn.bib
+      prefix: ''
+    -
+      heading: "Circuit Verification"
+      file: circuit.bib
       prefix: ''
     -
       heading: "Placement"
       file: place.bib
       prefix: ''
     -
-      heading: "Design for Manufacutring"
-      file: dfm.bib
+      heading: "Clock Tree Synthesis"
+      file: CTS.bib
       prefix: ''
+    -
+      heading: "Routing"
+      file: routing.bib
+      prefix: ''
+    -
+      heading: "Layout Verification"
+      file: layoutVer.bib
+      prefix: ''
+    -
+      heading: "Mask Optimization"
+      file: opc.bib
+      prefix: ''
+
   # file: all.bib
   sort_bib: True
   include_image: False

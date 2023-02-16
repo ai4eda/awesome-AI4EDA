@@ -17,29 +17,6 @@ It can **automatically** render the plain `bibtex` file into `html` for display 
 
 We provide different categories according to the EDA flow, please copy your bibtex to the corresponding category.
 
-<table>
-    <tr>
-        <td>Category</td>
-        <td>File</td>
-        <td>notes</td>
-    </tr>
-    <tr>
-        <td>Architechture Design</td>
-        <td>`arch.bib`</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Placement</td>
-        <td>`place.bib`</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Design for Manufacutring</td>
-        <td>`dfm.bib`</td>
-        <td></td>
-    </tr>
-</table>
-
 The categories are defined in `pub.yaml` of repo:[awesome-AI4EDA](https://github.com/ai4eda/awesome-AI4EDA), you can also submit new categories to `pub.yaml` or contact [cgjcuhk@gmail.com](mailto:cgjcuhk@gmail.com) to help you add the categories.
 
 ```yaml
@@ -49,16 +26,36 @@ categories_publications:
   group_by_topic: True
   categories:
     -
-      heading: "Architechture Design"
-      file: arch.bib
+      heading: "High Level Synthesis"
+      file: hls.bib
+      prefix: ''
+    -
+      heading: "Logic Synthesis"
+      file: logicSyn.bib
+      prefix: ''
+    -
+      heading: "Circuit Verification"
+      file: circuit.bib
       prefix: ''
     -
       heading: "Placement"
       file: place.bib
       prefix: ''
     -
-      heading: "Design for Manufacutring"
-      file: dfm.bib
+      heading: "Clock Tree Synthesis"
+      file: CTS.bib
+      prefix: ''
+    -
+      heading: "Routing"
+      file: routing.bib
+      prefix: ''
+    -
+      heading: "Layout Verification"
+      file: layoutVer.bib
+      prefix: ''
+    -
+      heading: "Mask Optimization"
+      file: opc.bib
       prefix: ''
 ```
 
