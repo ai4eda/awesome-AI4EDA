@@ -58,31 +58,33 @@ categories_publications:
 
 Example: 👇🏻
 
-**Required Fileds**
+**Required Fields**
 
-the `_venue`, `year`, `topic` fileds are required. You publication will be displayed into the corresponding topic.
+the `_venue`, `year`, `topic` Fields are required. You publication will be displayed into the corresponding topic.
 
-**Optional Fileds**
+**Optional Fields**
 
-You can also add `url` or `link` filed to attach the paper link.
-Add the `abstract` filed to show the paper abstract.
-Add the `code_url`, `slides_url`, `video_url`, `talk_url`, `project_url` filed for link to your codes, slides, video, talks, or project pages.
+You can also add `url` or `link` field to attach the paper link.
+
+Add the `abstract` field to show the paper abstract.
+
+Add the `code_url`, `slides_url`, `video_url`, `talk_url`, `project_url` field for link to your codes, slides, video, talks, or project pages.
 
 ```bibtex
 @inproceedings{DAC23_Nitho,
   title={Physics-Informed Optical Kernel Regression Using Complex-valued Neural Fields},
   author={Chen, Guojin and Pei, Zehua and Yang, Haoyu and Ma, Yuzhe and Yu, Bei and Wong, Martin},
   booktitle={ACM/IEEE Design Automation Conference,  (\textbf{DAC '23})},
-  _venue={DAC},
-  year={2023},
-  topic = {Lithography},
-  url = {link to your paper},
-  abstract = {abstract of your paper},
-  code_url = {link to your codes},
-  slides_url = {link to your slides},
-  talk_url = {link to your talk video},
-  video_url = {link to your video},
-  project_url = {link to your project page},
+  _venue={DAC},                              # Required field,
+  year={2023},                               # Required field,
+  topic = {Lithography},                     # Required field,
+  url = {link to your paper},                # Optional field,
+  abstract = {abstract of your paper},       # Optional field,
+  code_url = {link to your codes},           # Optional field,
+  slides_url = {link to your slides},        # Optional field,
+  talk_url = {link to your talk video},      # Optional field,
+  video_url = {link to your video},          # Optional field,
+  project_url = {link to your project page}, # Optional field,
 }
 ```
 
