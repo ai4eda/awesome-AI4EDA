@@ -26,20 +26,6 @@
   abstract = {With the feature size continuously shrinking in advanced technology nodes, mask optimization is increasingly crucial in the conventional design flow, accompanied by an explosive growth in prohibitive computational overhead in optical proximity correction (OPC) methods. Recently, inverse lithography technique (ILT) has drawn significant attention and is becoming prevalent in emerging OPC solutions. However, ILT methods are either time-consuming or in weak performance of mask printability and manufacturability. In this paper, we present DevelSet, a GPU and deep neural network (DNN) accelerated level set OPC framework for metal layer. We first improve the conventional level set-based ILT algorithm by introducing the curvature term to reduce mask complexity and applying GPU acceleration to overcome computational bottlenecks. To further enhance printability and fast iterative convergence, we propose a novel deep neural network delicately designed with level set intrinsic principles to facilitate the joint optimization of DNN and GPU accelerated level set optimizer. Experimental results show that DevelSet framework surpasses the state-of-theart methods in printability and boost the runtime performance achieving instant level (around 1 second).}
 }
 
-@inproceedings{DATE21_levelset,
-    author = {Yu, Ziyang
-              and Chen, Guojin
-              and Ma, Yuzhe
-              and Yu, Bei},
-    title = {A GPU-enabled Level Set Method for Mask Optimization},
-    booktitle = {IEEE/ACM Proceedings Design, Automation and Test in Europe, (\textbf{DATE '21})},
-    year = {2020},
-    _venue = {DATE},
-    month = {11},
-    topic = {Mask Optimization},
-    abstract = {As the feature size of advanced integrated circuits keeps shrinking, resolution enhancement technique (RET) is utilized to improve the printability in the lithography process. Optical proximity correction (OPC) is one of the most widely used RETs aiming at compensating the mask to generate a more precise wafer image. In this paper, we put forward a level-set based OPC with high mask optimization quality and fast convergence. In order to suppress the disturbance of the condition fluctuation in lithography process, we propose a new process window-aware cost function. Then, a novel momentum-based evolution technique is adopted, which demonstrates substantial improvement. Moreover, graphics processing unit (GPU) is leveraged for accelerating the proposed algorithm. Experimental results on ICCAD 2013 benchmarks show that our algorithm outperforms all previous OPC algorithms in terms of both solution quality and runtime overhead. }
-}
-
 @inproceedings{ICCAD22_AdaOPC,
   title={{AdaOPC}: A Self-Adaptive Mask Optimization Framework For Real Design Patterns},
   author={Zhao, Wenqian
