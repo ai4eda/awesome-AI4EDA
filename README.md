@@ -28,44 +28,54 @@ categories_publications:
     -
       heading: "High Level Synthesis"
       file: hls.bib
-      prefix: ''
+
     -
       heading: "Logic Synthesis"
       file: logicSyn.bib
-      prefix: ''
+
     -
       heading: "Circuit Verification"
       file: circuit.bib
-      prefix: ''
+
     -
       heading: "Placement"
       file: place.bib
-      prefix: ''
+
     -
       heading: "Clock Tree Synthesis"
       file: CTS.bib
-      prefix: ''
+
     -
       heading: "Routing"
       file: routing.bib
-      prefix: ''
+
+    -
+      heading: "Timing"
+      file: timing.bib
+
     -
       heading: "Layout Verification"
       file: layoutVer.bib
-      prefix: ''
+
     -
       heading: "Mask Optimization"
       file: opc.bib
-      prefix: ''
+
 ```
 
 ### Step 2: Add the topic for your pub in the bibtex file.
 
-Example: 👇🏻 the `_venue`, `year`, `topic` fileds are required. You publication will be displayed into the corresponding topic.
+Example: 👇🏻
+
+**Required Fileds**
+
+the `_venue`, `year`, `topic` fileds are required. You publication will be displayed into the corresponding topic.
+
+**Optional Fileds**
 
 You can also add `url` filed to attach the paper link.
 And the `abstract` filed to add the paper abstract.
-Add the `code` filed for link to your codes.
+Add the `codes`, `slides`, `video` filed for link to your codes, slides, video.
 
 ```bibtex
 @inproceedings{DAC23_Nitho,
@@ -77,7 +87,9 @@ Add the `code` filed for link to your codes.
   topic = {Lithography},
   url = {link to your paper},
   abstract = {abstract of your paper},
-  code = {link to your codes}
+  codes = {link to your codes},
+  slides = {link to your slides},
+  video = {link to your video}
 }
 ```
 

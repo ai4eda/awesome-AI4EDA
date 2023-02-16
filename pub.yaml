@@ -49,6 +49,10 @@ categories_publications:
       file: routing.bib
       prefix: ''
     -
+      heading: "Timing"
+      file: timing.bib
+      prefix: ''
+    -
       heading: "Layout Verification"
       file: layoutVer.bib
       prefix: ''
