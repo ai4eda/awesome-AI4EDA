@@ -70,7 +70,7 @@ Add the `abstract` field to show the paper abstract.
 
 Add the `code_url`, `slides_url`, `video_url`, `talk_url`, `project_url` field for link to your codes, slides, video, talks, or project pages.
 
-```bibtex
+```txt
 @inproceedings{DAC23_Nitho,
   title={Physics-Informed Optical Kernel Regression Using Complex-valued Neural Fields},
   author={Chen, Guojin and Pei, Zehua and Yang, Haoyu and Ma, Yuzhe and Yu, Bei and Wong, Martin},
