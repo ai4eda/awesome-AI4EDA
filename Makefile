@@ -56,18 +56,28 @@ wslpdf:
 # 	cp $(MD) $(WEBSITE_MD)
 # 	date +%Y-%m-%d > $(WEBSITE_DATE)
 
-stage: $(PDF) $(MD)
-	cp $(PDF) $(WEBSITE_PDF)
+# stage: $(PDF) $(MD)
+# 	cp $(PDF) $(WEBSITE_PDF)
+# 	cp $(MD) $(WEBSITE_MD)
+# 	date +%Y-%m-%d > $(WEBSITE_DATE)
+stage: $(MD)
 	cp $(MD) $(WEBSITE_MD)
 	date +%Y-%m-%d > $(WEBSITE_DATE)
+
 
 jekyll: stage
 	cd $(WEBSITE_DIR) && bundle exec jekyll server
 
+# push: stage
+# 	git -C $(WEBSITE_DIR) add $(WEBSITE_PDF) $(WEBSITE_MD) $(WEBSITE_DATE)
+# 	git -C $(WEBSITE_DIR) commit -m "Update pub."
+# 	git -C $(WEBSITE_DIR) push
+
 push: stage
-	git -C $(WEBSITE_DIR) add $(WEBSITE_PDF) $(WEBSITE_MD) $(WEBSITE_DATE)
+	git -C $(WEBSITE_DIR) add $(WEBSITE_MD) $(WEBSITE_DATE)
 	git -C $(WEBSITE_DIR) commit -m "Update pub."
 	git -C $(WEBSITE_DIR) push
+
 
 clean:
 	rm -rf *.db $(BUILD_DIR)/pub*

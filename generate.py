@@ -244,6 +244,11 @@ def get_pub_md(context, config):
 
         pubs_len = len(pubs)
 
+        if prefix_reverse:
+            gidx = pubs_len
+        else:
+            gidx = 1
+
         if group_by_year:
             for pub in pubs:
                 m = re.search('(\d{4})', pub['year'])
@@ -253,10 +258,7 @@ def get_pub_md(context, config):
             details = ''
             # change the pub idx to reverse sequence.
 
-            if prefix_reverse:
-                gidx = pubs_len
-            else:
-                gidx = 1
+
 
             for year, year_pubs in groupby(pubs, lambda pub: pub['year_int']):
                 print_year = year >= 2015
@@ -287,9 +289,13 @@ def get_pub_md(context, config):
         else:
             details = '<table class="table table-hover">'
             for i, pub in enumerate(pubs):
-                details += _get_pub_str(pub, '', i + 1,
+                details += _get_pub_str(pub, config['prefix'], gidx,
                         include_image=include_image,
                     ) + sep
+                if prefix_reverse:
+                    gidx -= 1
+                else:
+                    gidx += 1
             details += '</table>'
         contents['details'] = details
         contents['file'] = config['file']
@@ -424,7 +430,17 @@ def get_pub_latex(context, config):
                     gidx += 1
 
     else:
-        assert False
+        details = ''
+        if prefix_reverse:
+            gidx = len_pubs
+        else:
+            gidx = 1
+        for i, pub in enumerate(pubs):
+            details += _get_pub_str(pub, config['prefix'], gidx) + sep
+            if prefix_reverse:
+                gidx -= 1
+            else:
+                gidx += 1
     contents['details'] = details
     contents['file'] = config['file']
 
