@@ -52,6 +52,9 @@ categories_publications:
     -
       heading: "Mask Optimization"
       file: opc.bib
+    -
+      heading: "Analog Layout Synthesis"
+      file: analog.bib
 ```
 
 ### Step 2: Add the topic for your pub in the bibtex file.
@@ -60,7 +63,7 @@ Example: 👇🏻
 
 **Required Fields**
 
-the `_venue`, `year`, `topic` Fields are required. You publication will be displayed into the corresponding topic.
+The `title`, `author`, `_venue`, `year`, `topic` Fields are required. You publication will be displayed into the corresponding topic.
 
 **Optional Fields**
 
@@ -88,7 +91,7 @@ Add the `code_url`, `slides_url`, `video_url`, `talk_url`, `project_url` field f
 }
 ```
 
-### Step3: Submit a PR or email to Guojin Chen ([cgjcuhk@gmail.com](mailto:cgjcuhk@gmail.com))
+### Step3: Submit a PR or email to [Guojin Chen](https://gjchen.me) ([cgjcuhk@gmail.com](mailto:cgjcuhk@gmail.com))
 
 Thank you.
 

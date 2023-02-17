@@ -51,7 +51,9 @@ categories_publications:
     -
       heading: "Mask Optimization"
       file: opc.bib
-
+    -
+      heading: "Analog Layout Synthesis"
+      file: analog.bib
   # file: all.bib
   sort_bib: True
   include_image: False
