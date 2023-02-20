@@ -22,7 +22,6 @@ order:
 
 categories_publications:
   name: "All publications"
-  group_by_topic: True
   categories:
     -
       heading: "High Level Synthesis"
@@ -54,7 +53,11 @@ categories_publications:
     -
       heading: "Analog Layout Synthesis"
       file: analog.bib
+    -
+      heading: "Dataset and Tools"
+      file: data.bib
   # file: all.bib
+  group_by_topic: True
   sort_bib: True
   include_image: False
   group_by_year: False
