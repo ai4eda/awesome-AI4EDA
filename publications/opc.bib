@@ -54,7 +54,7 @@
 @inproceedings{DAC23_Nitho,
   title     = {Physics-Informed Optical Kernel Regression Using Complex-valued Neural Fields},
   author    = {Chen, Guojin and Pei, Zehua and Yang, Haoyu and Ma, Yuzhe and Yu, Bei and Wong, Martin},
-  booktitle = {ACM/IEEE Design Automation Conference,  (\textbf{DAC '23})},
+  booktitle = {Proceedings of the 60th ACM/IEEE Design Automation Conference},
   _venue    = {DAC},
   year      = {2023},
   month     = {7},
@@ -72,3 +72,41 @@
   url       = {https://dl.acm.org/doi/abs/10.1145/3508352.3549398},
   code_url  = {https://github.com/Brilight/DeePEB}
 }
+
+
+@inproceedings{10.1145/3489517.3530580,
+  author    = {Yang, Haoyu and Li, Zongyi and Sastry, Kumara and Mukhopadhyay, Saumyadip and Kilgard, Mark and Anandkumar, Anima and Khailany, Brucek and Singh, Vivek and Ren, Haoxing},
+  title     = {Generic Lithography Modeling with Dual-Band Optics-Inspired Neural Networks},
+  year      = {2022},
+  topic     = {Lithography},
+  _venue    = {DAC},
+  isbn      = {9781450391429},
+  publisher = {Association for Computing Machinery},
+  address   = {New York, NY, USA},
+  url       = {https://doi.org/10.1145/3489517.3530580},
+  doi       = {10.1145/3489517.3530580},
+  abstract  = {Lithography simulation is a critical step in VLSI design and optimization for manufacturability. Existing solutions for highly accurate lithography simulation with rigorous models are computationally expensive and slow, even when equipped with various approximation techniques. Recently, machine learning has provided alternative solutions for lithography simulation tasks such as coarse-grained edge placement error regression and complete contour prediction. However, the impact of these learning-based methods has been limited due to restrictive usage scenarios or low simulation accuracy. To tackle these concerns, we introduce an dual-band optics-inspired neural network design that considers the optical physics underlying lithography. To the best of our knowledge, our approach yields the first published via/metal layer contour simulation at 1nm2/pixel resolution with any tile size. Compared to previous machine learning based solutions, we demonstrate that our framework can be trained much faster and offers a significant improvement on efficiency and image quality with 20\texttimes{} smaller model size. We also achieve 85\texttimes{} simulation speedup over traditional lithography simulator with ~ 1% accuracy loss.},
+  booktitle = {Proceedings of the 59th ACM/IEEE Design Automation Conference},
+  series    = {DAC '22}
+}
+
+
+@inproceedings{10.1145/3195970.3196056,
+  author    = {Yang, Haoyu and Li, Shuhe and Ma, Yuzhe and Yu, Bei and Young, Evangeline F. Y.},
+  title     = {GAN-OPC: Mask Optimization with Lithography-Guided Generative Adversarial Nets},
+  year      = {2018},
+  _venue    = {DAC},
+  isbn      = {9781450357005},
+  publisher = {Association for Computing Machinery},
+  address   = {New York, NY, USA},
+  url       = {https://doi.org/10.1145/3195970.3196056},
+  doi       = {10.1145/3195970.3196056},
+  abstract  = {Mask optimization has been a critical problem in the VLSI design flow due to the mismatch between the lithography system and the continuously shrinking feature sizes. Optical proximity correction (OPC) is one of the prevailing resolution enhancement techniques (RETs) that can significantly improve mask printability. However, in advanced technology nodes, the mask optimization process consumes more and more computational resources. In this paper, we develop a generative adversarial network (GAN) model to achieve better mask optimization performance. We first develop an OPC-oriented GAN flow that can learn target-mask mapping from the improved architecture and objectives, which leads to satisfactory mask optimization results. To facilitate the training process and ensure better convergence, we also propose a pre-training procedure that jointly trains the neural network with inverse lithography technique (ILT). At convergence, the generative network is able to create quasi-optimal masks for given target circuit patterns and fewer normal OPC steps are required to generate high quality masks. Experimental results show that our flow can facilitate the mask optimization process as well as ensure a better printability.},
+  booktitle = {Proceedings of the 55th Annual Design Automation Conference},
+  articleno = {131},
+  numpages  = {6},
+  location  = {San Francisco, California},
+  series    = {DAC '18},
+  topic     = {Mask Optimization}
+}
+

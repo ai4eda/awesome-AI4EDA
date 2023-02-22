@@ -72,7 +72,6 @@ The categories are defined in `pub.yaml` of repo: [awesome-AI4EDA](https://githu
 # pub.yaml
 categories_publications:
   name: "All publications"
-  group_by_topic: True
   categories:
     -
       heading: "High Level Synthesis"
@@ -104,6 +103,9 @@ categories_publications:
     -
       heading: "Analog Layout Synthesis"
       file: analog.bib
+    -
+      heading: "Dataset and Tools"
+      file: data.bib
 ```
 
 
