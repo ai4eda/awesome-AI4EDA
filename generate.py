@@ -104,6 +104,8 @@ def get_pub_md(context, config):
             links.append(
                 "[<a href=\'{}\' target='_blank'>paper</a>] ".format(pub['link'])
             )
+        else:
+            print(f"+ Paper link not found:\n {pub['title']}\n")
 
         for base in ['code', 'slides', 'talk', 'video', 'project']:
             key = base + '_url'
@@ -130,7 +132,7 @@ def get_pub_md(context, config):
             return f'''
 <tr id="tr-{pub['ID']}" {tr_style}>
 <td align='right' style='padding-left:0;padding-right:0;'>
-[{prefix}{gidx}] 
+[{prefix}{gidx}]
 </td>
 <td>
 {img_str}
