@@ -35,6 +35,8 @@ You can also add `url` or `link` field to attach the paper link.
 
 Add the `abstract` field to show the paper abstract.
 
+Add the `topic` field as a topic.
+
 Add the `code_url`, `slides_url`, `video_url`, `talk_url`, `project_url` field for link to your codes, slides, video, talks, or project pages.
 
 ```txt
@@ -45,6 +47,7 @@ Add the `code_url`, `slides_url`, `video_url`, `talk_url`, `project_url` field f
   _venue={DAC},                              # Required field,
   year={2023},                               # Required field,
   url = {link to your paper},                # Optional field,
+  topic = {topic of your paper}              # Optional field,
   abstract = {abstract of your paper},       # Optional field,
   code_url = {link to your codes},           # Optional field,
   slides_url = {link to your slides},        # Optional field,
