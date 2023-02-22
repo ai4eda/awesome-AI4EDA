@@ -32,6 +32,9 @@ categories_publications:
     -
       heading: "Circuit Verification"
       file: circuit.bib
+    - 
+      heading: "Floorplan"
+      file: floorplan.bib      
     -
       heading: "Placement"
       file: place.bib
