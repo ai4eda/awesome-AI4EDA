@@ -60,7 +60,7 @@ Add the `code_url`, `slides_url`, `video_url`, `talk_url`, `project_url` field f
 
 >🚧 Warning
 >
->1. You should separate the names in `author` field with **and**.
+>1. You should separate the names in `author` field with **"and"**.
 
 <br/>
 <br/>
