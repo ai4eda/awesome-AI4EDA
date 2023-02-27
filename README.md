@@ -29,6 +29,7 @@ Following this format. Example: 👇🏻
 
 The `title`, `author`, `_venue`, and `year` Fields are required. You publication will be displayed into the corresponding topic.
 
+
 **Optional Fields**
 
 You can also add `url` or `link` field to attach the paper link.
@@ -56,6 +57,10 @@ Add the `code_url`, `slides_url`, `video_url`, `talk_url`, `project_url` field f
   project_url = {link to your project page}, # Optional field,
 }
 ```
+
+>🚧 Warning
+>
+>1. You should separate the names in `author` field with **and**.
 
 <br/>
 <br/>
