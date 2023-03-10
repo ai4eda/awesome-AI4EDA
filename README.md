@@ -27,13 +27,16 @@ Following this format. Example: 👇🏻
 
 **Required Fields**
 
-The `title`, `author`, `_venue`, `year`, `topic` Fields are required. You publication will be displayed into the corresponding topic.
+The `title`, `author`, `_venue`, and `year` Fields are required. You publication will be displayed into the corresponding topic.
+
 
 **Optional Fields**
 
 You can also add `url` or `link` field to attach the paper link.
 
 Add the `abstract` field to show the paper abstract.
+
+Add the `topic` field as a topic.
 
 Add the `code_url`, `slides_url`, `video_url`, `talk_url`, `project_url` field for link to your codes, slides, video, talks, or project pages.
 
@@ -44,8 +47,8 @@ Add the `code_url`, `slides_url`, `video_url`, `talk_url`, `project_url` field f
   booktitle={ACM/IEEE Design Automation Conference,  (\textbf{DAC '23})},
   _venue={DAC},                              # Required field,
   year={2023},                               # Required field,
-  topic = {Lithography},                     # Required field,
   url = {link to your paper},                # Optional field,
+  topic = {topic of your paper}              # Optional field,
   abstract = {abstract of your paper},       # Optional field,
   code_url = {link to your codes},           # Optional field,
   slides_url = {link to your slides},        # Optional field,
@@ -54,6 +57,10 @@ Add the `code_url`, `slides_url`, `video_url`, `talk_url`, `project_url` field f
   project_url = {link to your project page}, # Optional field,
 }
 ```
+
+>🚧 Warning
+>
+>1. You should separate the names in `author` field with **"and"**.
 
 <br/>
 <br/>
