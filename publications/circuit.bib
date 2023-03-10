@@ -59,7 +59,7 @@
   url       = {https://doi.org/10.1145/3566097.3567896},
   doi       = {10.1145/3566097.3567896},
   _venue    = {ASP-DAC},
-  topic     = {Security},
+  topic     = {Security}
 }
 
 @inproceedings{DBLP:conf/aspdac/GengSCXHY23,
@@ -73,5 +73,71 @@
   url       = {https://doi.org/10.1145/3566097.3568363},
   doi       = {10.1145/3566097.3568363},
   _venue    = {ASP-DAC},
-  topic     = {Reliability},
+  topic     = {Reliability}
 }
+
+
+@article{10.1145/3555805,
+  author   = {Xing, Wei W. and Jin, Xiang and Feng, Tian and Niu, Dan and Zhao, Weisheng and Jin, Zhou},
+  title    = {BoA-PTA: A Bayesian Optimization Accelerated PTA Solver for SPICE Simulation},
+  year     = {2022},
+  _venue   = {TODAES},
+  topic    = {Circuit Simulation},
+  url      = {https://www.ssslab.cn/assets/papers/2022-xing-BoA-PTA.pdf},
+  abstract = {One of the greatest challenges in integrated circuit design is the repeated executions of computationally expensive SPICE simulations, particularly when highly complex chip testing/verification is involved. Recently, pseudo-transient analysis (PTA) has shown to be one of the most promising continuation SPICE solvers. However, the PTA efficiency is highly influenced by the inserted pseudo-parameters. In this work, we proposed BoA-PTA, a Bayesian optimization accelerated PTA that can substantially accelerate simulations and improve convergence performance without introducing extra errors. Furthermore, our method does not require any pre-computation data or offline training. The acceleration framework can either speed up ongoing, repeated simulations (e.g., Monte-Carlo simulations) immediately or improve new simulations of completely different circuits. BoA-PTA is equipped with cutting-edge machine learning techniques, such as deep learning, Gaussian process, Bayesian optimization, non-stationary monotonic transformation, and variational inference via reparameterization. We assess BoA-PTA in 43 benchmark circuits and real industrial circuits against other SOTA methods and demonstrate an average of 1.5x (maximum 3.5x) for the benchmark circuits and up to 250x speedup for the industrial circuit designs over the original CEPTA without sacrificing any accuracy.},
+  journal  = {ACM Transactions on Design Automation of Electronic Systems}
+}
+
+
+@article{9893885,
+  author  = {Dong, Yichao and Niu, Dan and Jin, Zhou and Zhang, Chuan and Li, Qi and Sun, Changyin},
+  journal = {IEEE Transactions on Circuits and Systems II: Express Briefs, (\textbf{TCAS-II '23})},
+  title   = {Adaptive Stepping PTA for DC Analysis Based on Reinforcement Learning},
+  _venue  = {TCAS-II},
+  year    = {2023},
+  topic   = {Circuit Simulation},
+  url     = {https://www.ssslab.cn/assets/papers/2022-dong-PTA.pdf}
+}
+
+
+@article{10057469,
+  author  = {Niu, Dan and Dong, Yichao and Jin, Zhou and Zhang, Chuan and Li, Qi and Sun, Changyin},
+  journal = {IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems, (\textbf{TCAD '23})},
+  title   = {OSSP-PTA: An Online Stochastic Stepping Policy for PTA on Reinforcement Learning},
+  year    = {2023},
+  _venue  = {TCAD},
+  topic   = {Circuit Simulation},
+  url     = {https://doi.org/10.1109/TCAD.2023.3251731}
+}
+
+@inproceedings{DAC23_Accele,
+  author    = {Wang, Tengcheng and Li, Wenhao and Pei, Haojie and Sun, Yuying and Jin, Zhou and Liu, Weifeng},
+  title     = {Accelerating Sparse LU Factorization with Density-aware Adaptive Matrix Multiplication for Circuit Simulation},
+  booktitle = {Proceedings of the 60th ACM/IEEE Design Automation Conference, (\textbf{DAC '23})},
+  _venue    = {DAC},
+  year      = {2023},
+  topic     = {Circuit Simulation}
+}
+
+@inproceedings{10.1145/3489517.3530512,
+  author     = {Jin, Zhou and Pei, Haojie and Dong, Yichao and Jin, Xiang and Wu, Xiao and Xing, Wei W. and Niu, Dan},
+  title      = {Accelerating Nonlinear DC Circuit Simulation with Reinforcement Learning},
+  booktitle  = {Proceedings of the 59th ACM/IEEE Design Automation Conference, (\textbf{DAC '22})},
+  _venue     = {DAC},
+  year       = {2022},
+  topic      = {Circuit Simulation},
+  url        = {https://www.ssslab.cn/assets/papers/2022-jin-RLPTA.pdf},
+  abstract   = {DC analysis is the foundation for nonlinear electronic circuit simulation. Pseudo transient analysis (PTA) methods have gained great success among various continuation algorithms. However, PTA tends to be computationally intensive without careful tuning of parameters and proper stepping strategies. In this paper, we harness the latest advancing in machine learning to resolve these challenges simultaneously. Particularly, an active learning is leveraged to provide a fine initial solver environment, in which a TD3-based Reinforcement Learning (RL) is implemented to accelerate the simulation on the fly. The RL agent is strengthen with dual agents, priority sampling, and cooperative learning to enhance its robustness and convergence. The proposed algorithms are implemented in an out-of-the-box SPICElike simulator, which demonstrated a significant speedup: up to 3.1X for the initial stage and 234X for the RL stage.},
+  slides_url = {https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fwww.ssslab.cn%2Fassets%2Fslides%2F2022-jin-RLPTA.pptx&wdOrigin=BROWSELINK}
+}
+
+@inproceedings{9712511,
+  author    = {Chen, Yufei and Pei, Haojie and Dong, Xiao and Jin, Zhou and Zhuo, Cheng},
+  booktitle = {2022 27th Asia and South Pacific Design Automation Conference, (\textbf{ASP-DAC '22})},
+  title     = {Application of Deep Learning in Back-End Simulation: Challenges and Opportunities},
+  year      = {2022},
+  _venue    = {ASP-DAC},
+  topic     = {Circuit Simulation},
+  url       = {https://www.ssslab.cn/assets/papers/2022-chen-backend.pdf}
+}
+

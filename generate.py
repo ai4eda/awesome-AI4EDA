@@ -24,6 +24,8 @@ from datetime import date
 from itertools import groupby
 from jinja2 import Environment, FileSystemLoader
 
+from collections import Counter
+
 # TODO: Could really be cleaned up
 def get_pub_md(context, config):
     def _get_author_str(immut_author_list):
@@ -105,7 +107,7 @@ def get_pub_md(context, config):
                 "[<a href=\'{}\' target='_blank'>paper</a>] ".format(pub['link'])
             )
         else:
-            print(f"+ Paper link not found:\n {pub['title']}\n")
+            print(f"+ Paper link not found [{year_venue}]:\n {pub['title']}\n")
 
         for base in ['code', 'slides', 'talk', 'video', 'project']:
             key = base + '_url'
@@ -181,6 +183,14 @@ def get_pub_md(context, config):
             type_content = {}
             type_content['title'] = category['heading']
             pubs = load_and_replace(category['file'])
+
+            # Remove duplicate
+            pub_titles = [p['title'] for p in pubs]
+            dup_titles = dict(Counter(pub_titles))
+            for t, num in dup_titles.items():
+                if num > 1:
+                    print(f'* duplicated paper:\n{t}\n')
+
             if 'prefix' in category:
                 prefix = category['prefix']
             else:
