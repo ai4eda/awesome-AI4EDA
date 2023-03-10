@@ -111,6 +111,9 @@ categories_publications:
       heading: "Analog Layout Synthesis"
       file: analog.bib
     -
+      heading: "Testing"
+      file: testing.bib
+    -
       heading: "Dataset and Tools"
       file: data.bib
 ```
