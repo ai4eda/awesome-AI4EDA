@@ -145,37 +145,72 @@
   _venue  = {TCAD},
   year    = {2022},
   topic   = {Electromigration Analysis},
-  url     = {https://arxiv.org/abs/2203.15247},
+  url     = {https://arxiv.org/abs/2203.15247}
 }
 
 
-@INPROCEEDINGS{MAGICAL_DAC19_Xu,
-author={Xu, Biying and Lin, Yibo and Tang, Xiyuan and Li, Shaolan and Shen, Linxiao and Sun, Nan and Pan, David Z.},
-booktitle={DAC},
-title={{WellGAN}: Generative-Adversarial-Network-Guided Well Generation for Analog/Mixed-Signal Circuit Layout},
-year={2019}, }
-
-
-
-@INPROCEEDINGS{MAGICAL_DATE20_Liu,
-author={Liu, Mingjie and Zhu, Keren and Gu, Jiaqi and Shen, Linxiao and Tang, Xiyuan and Sun, Nan and Pan, David Z.},
-booktitle={DATE},
-title={Towards Decrypting the Art of Analog Layout: Placement Quality Prediction via Transfer Learning},
-year={2020},}
-
-    
-  @INPROCEEDINGS{MAGICAL_DAC21_Chen,
-  author={Chen, Hao and Zhu, Keren and Liu, Mingjie and Tang, Xiyuan and Sun, Nan and Pan, David Z.},
-  booktitle={DAC}, 
-  title={Universal Symmetry Constraint Extraction for Analog and Mixed-Signal Circuits with Graph Neural Networks}, 
-  year={2021}
-  } 
-
-
-  @inproceedings{MAGICAL_ICCAD22_Zhu,
-author = {Zhu, Keren and Chen, Hao and Turner, Walker and Kokai, George and Wei, Po-Hsuan and Pan, David Z. and Ren, Haoxing},
-title = {TAG: Learning Circuit Spatial Embedding From Layouts},
-year = {2022},
-booktitle = {ICCAD}
+@inproceedings{MAGICAL_DAC19_Xu,
+  author    = {Xu, Biying and Lin, Yibo and Tang, Xiyuan and Li, Shaolan and Shen, Linxiao and Sun, Nan and Pan, David Z.},
+  booktitle = {2019 56th ACM/IEEE Design Automation Conference (DAC)},
+  _venue    = {DAC},
+  title     = {WellGAN: Generative-Adversarial-Network-Guided Well Generation for Analog/Mixed-Signal Circuit Layout},
+  year      = {2019},
+  url       = {https://ieeexplore.ieee.org/document/8806799}
 }
-  
+
+
+
+@inproceedings{MAGICAL_DATE20_Liu,
+  author    = {Liu, Mingjie and Zhu, Keren and Gu, Jiaqi and Shen, Linxiao and Tang, Xiyuan and Sun, Nan and Pan, David Z.},
+  booktitle = {2020 Design, Automation & Test in Europe Conference & Exhibition (DATE)},
+  title     = {Towards Decrypting the Art of Analog Layout: Placement Quality Prediction via Transfer Learning},
+  _venue    = {DATE},
+  year      = {2020},
+  url       = {https://ieeexplore.ieee.org/document/9116330}
+}
+
+
+
+@inproceedings{MAGICAL_DAC21_Chen,
+  author    = {Chen, Hao and Zhu, Keren and Liu, Mingjie and Tang, Xiyuan and Sun, Nan and Pan, David Z.},
+  booktitle = {2021 58th ACM/IEEE Design Automation Conference (DAC)},
+  _venue    = {DAC},
+  title     = {Universal Symmetry Constraint Extraction for Analog and Mixed-Signal Circuits with Graph Neural Networks},
+  year      = {2021},
+  url       = {https://ieeexplore.ieee.org/document/9586211}
+}
+
+
+
+@inproceedings{MAGICAL_ICCAD22_Zhu,
+  author    = {Zhu, Keren and Chen, Hao and Turner, Walker J. and Kokai, George F. and Wei, Po-Hsuan and Pan, David Z. and Ren, Haoxing},
+  title     = {TAG: Learning Circuit Spatial Embedding from Layouts},
+  year      = {2022},
+  url       = {https://doi.org/10.1145/3508352.3549384},
+  doi       = {10.1145/3508352.3549384},
+  abstract  = {Analog and mixed-signal (AMS) circuit designs still rely on human design expertise. Machine learning has been assisting circuit design automation by replacing human experience with artificial intelligence. This paper presents TAG, a new paradigm of learning the circuit representation from layouts leveraging Text, self Attention and Graph. The embedding network model learns spatial information without manual labeling. We introduce text embedding and a self-attention mechanism to AMS circuit learning. Experimental results demonstrate the ability to predict layout distances between instances with industrial FinFET technology benchmarks. The effectiveness of the circuit representation is verified by showing the transferability to three other learning tasks with limited data in the case studies: layout matching prediction, wirelength estimation, and net parasitic capacitance prediction.},
+  booktitle = {Proceedings of the 41st IEEE/ACM International Conference on Computer-Aided Design},
+  _venue    = {ICCAD},
+}
+
+
+
+@inproceedings{li2020customizedGNNPlacement,
+  author    = {Li, Yaguang and Lin, Yishuang and Madhusudan, Meghna and Sharma, Arvind and Xu, Wenbin and Sapatnekar, Sachin S. and Harjani, Ramesh and Hu, Jiang},
+  booktitle = {2020 IEEE/ACM International Conference On Computer Aided Design (ICCAD)},
+  title     = {A Customized Graph Neural Network Model for Guiding Analog IC Placement},
+  _venue    = {ICCAD},
+  year      = {2020},
+  url       = {https://dl.acm.org/doi/10.1145/3400302.3415624},
+  topic     = {Analog Layout Placement}
+}
+
+@inproceedings{lin2022analyticalplacement,
+  author    = {Lin, Yishuang and Li, Yaguang and Fang, Donghao and Madhusudan, Meghna and Sapatnekar, Sachin S. and Harjani, Ramesh and Hu, Jiang},
+  booktitle = {2022 Design, Automation & Test in Europe Conference & Exhibition (DATE)},
+  _venue    = {DATE},
+  title     = {Are Analytical Techniques Worthwhile for Analog IC Placement?},
+  year      = {2022},
+  doi       = {10.23919/DATE54114.2022.9774498},
+  url       = {https://ieeexplore.ieee.org/document/9774498}
+}
