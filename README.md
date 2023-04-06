@@ -19,7 +19,7 @@ It can **automatically** render the plain `bibtex` file into `html` for display 
 
 By email or By github PR.
 
-## Method 1: send your `bibtex` to Guojin Chen by email [cgjcuhk@gmail.com](cgjcuhk@gmail.com)
+## Method 1: send your `bibtex` to [Guojin Chen](https://gjchen.me) by email [cgjcuhk@gmail.com](cgjcuhk@gmail.com)
 
 
 ### `bibtex` format
@@ -179,3 +179,10 @@ new documents to another repository with `make jekyll` and `make push`.
    `REPLACEMENTS` in `generate.py` converts them properly.
 3. The LaTeX templates use modified Jinja delimiters to avoid overlaps with
    normal LaTeX. See `generate.py` for details.
+
+
+## Acknowledgement
+
+Thanks for the contribution and support from Prof. [Bei Yu](https://www.cse.cuhk.edu.hk/~byu/), Prof. [Yibo Lin](https://yibolin.com/), Dr. [Keren Zhu](https://krz.engineer/) and Mr.[Jing Mai](https://magic3007.github.io/)
+
+See [more contributors here](https://github.com/ai4eda/awesome-AI4EDA/graphs/contributors).
