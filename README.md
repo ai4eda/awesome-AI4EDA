@@ -19,7 +19,7 @@ It can **automatically** render the plain `bibtex` file into `html` for display 
 
 By email or By github PR.
 
-## Method 1: send your `bibtex` to [Guojin Chen](https://gjchen.me) by email [cgjcuhk@gmail.com](cgjcuhk@gmail.com)
+## Method 1: send your `bibtex` to [Guojin Chen](https://gjchen.me) by email [cgjcuhk@gmail.com](mailto:cgjcuhk@gmail.com)
 
 
 ### `bibtex` format
