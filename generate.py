@@ -20,6 +20,7 @@ import shelve
 from scholarly import scholarly
 import bibtexparser.customization as bc
 from bibtexparser.bparser import BibTexParser
+import bibtexparser
 from datetime import date
 from itertools import groupby
 from jinja2 import Environment, FileSystemLoader
@@ -96,15 +97,15 @@ def get_pub_md(context, config):
 [<a href='javascript:;'
     onclick=\'$(\"#abs_{}{}\").toggle()\'>abs</a>]""".format(pub['ID'], prefix))
             abstract = context.make_replacements(pub['abstract'])
-        if 'link' in pub:
+        if 'url' in pub:
             img_str = "<a href=\'{}\' target='_blank'>{}</a> ".format(
-                pub['link'], img_str)
+                pub['url'], img_str)
             # title = "<a href=\'{}\' target='_blank'>{}</a> ".format(
                 # pub['link'], title)
             # title = "<a href=\'{}\' target='_blank'>{}</a> ".format(
             #     pub['link'], title)
             links.append(
-                "[<a href=\'{}\' target='_blank'>paper</a>] ".format(pub['link'])
+                "[<a href=\'{}\' target='_blank'>paper</a>] ".format(pub['url'])
             )
         else:
             print(f"+ Paper link not found [{year_venue}]:\n {pub['title']}\n")
@@ -162,7 +163,10 @@ def get_pub_md(context, config):
 
     def load_and_replace(bibtex_file):
         with open(os.path.join('publications', bibtex_file), 'r') as f:
-            p = BibTexParser(f.read(), bc.author).get_entry_list()
+            # after bibtexparser 1.4
+            parser = BibTexParser()
+            parser.customization = bc.author
+            p = bibtexparser.loads(f.read(), parser).entries
         for pub in p:
             for field in pub:
                 if field != 'link':
@@ -704,7 +708,7 @@ def main():
     yaml_data = {}
     for yaml_file in args.yamls:
         with open(yaml_file) as f:
-            yaml_data.update(yaml.load(f))
+            yaml_data.update(yaml.load(f, Loader=yaml.Loader))
 
     if args.latex or args.markdown:
         if args.latex:
