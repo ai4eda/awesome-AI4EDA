@@ -60,9 +60,6 @@ categories_publications:
       heading: "Testing"
       file: testing.bib
     -
-      heading: "Simulation"
-      file: simulation.bib
-    -
       heading: "Dataset and Tools"
       file: data.bib
   # file: all.bib

@@ -183,6 +183,6 @@ new documents to another repository with `make jekyll` and `make push`.
 
 ## Acknowledgement
 
-Thanks for the contribution and support from Prof. [Bei Yu](https://www.cse.cuhk.edu.hk/~byu/), Prof. [Yibo Lin](https://yibolin.com/), Dr. [Keren Zhu](https://krz.engineer/) and Mr.[Jing Mai](https://magic3007.github.io/)
+Thanks for the contribution and support from Prof. [Bei Yu](https://www.cse.cuhk.edu.hk/~byu/), Prof. [Yibo Lin](https://yibolin.com/), Dr. [Keren Zhu](https://krz.engineer/), Mr. [Guojin Chen](https://gjchen.me) and Mr.[Jing Mai](https://magic3007.github.io/)
 
 See [more contributors here](https://github.com/ai4eda/awesome-AI4EDA/graphs/contributors).

@@ -186,6 +186,7 @@ def get_pub_md(context, config):
         for category in config['categories']:
             type_content = {}
             type_content['title'] = category['heading']
+            type_content['title_id'] = category['heading'].replace(" ", "_").lower()
             pubs = load_and_replace(category['file'])
 
             # Remove duplicate
