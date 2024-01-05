@@ -1,6 +1,6 @@
 <h1>{{ name }}
-<a class="btn btn-sm btn-primary" role="button" href='javascript:;' onclick="$('.collapse').collapse('show')">Show all</a>
-<a class="btn btn-sm btn-primary" role="button" href='javascript:;' onclick="$('.collapse').collapse('hide')">Hide all</a>
+<a class="btn btn-sm btn-primary" role="button" href='javascript:;' onclick="$('.collapse-table.collapse').collapse('show')">Show all</a>
+<a class="btn btn-sm btn-primary" role="button" href='javascript:;' onclick="$('.collapse-table.collapse').collapse('hide')">Hide all</a>
 </h1>
 Click on section title to see details.
 
@@ -15,11 +15,11 @@ Click on section title to see details.
 </a>
 </h2>
 
-<div id="{{type_content.title_id}}" class="collapse">
+<div id="{{type_content.title_id}}" class="collapse-table collapse">
 {{ type_content.details }}
 </div>
 <br>
 {% endfor %}
 
-<a class="btn btn-sm btn-primary" role="button" href='javascript:;' onclick="$('.collapse').collapse('show')">Show all</a>
-<a class="btn btn-sm btn-primary" role="button" href='javascript:;' onclick="$('.collapse').collapse('hide')">Hide all</a>
+<a class="btn btn-sm btn-primary" role="button" href='javascript:;' onclick="$('.collapse-table.collapse').collapse('show')">Show all</a>
+<a class="btn btn-sm btn-primary" role="button" href='javascript:;' onclick="$('.collapse-table.collapse').collapse('hide')">Hide all</a>
