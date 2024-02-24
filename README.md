@@ -5,6 +5,18 @@ This repo [awesome-AI4EDA](https://github.com/ai4eda/awesome-AI4EDA) contains th
 It can **automatically** render the plain `bibtex` file into `html` for display on the webpage.
 
 
+If you find it helpful, feel free to cite it as
+
+```txt
+@article{chen2023ai4eda,
+  title   = {Awesome AI for EDA: A curated paper list of Artificial Intelligence for Electronic Design Automation studies.},
+  author  = {Chen, Guojin and Mai, Jing and Lin, Yibo and Yu, Bei},
+  journal = {ai4eda.github.io},
+  year    = {2023},
+  url     = {https://ai4eda.github.io/}
+}
+```
+
 
 ## Example
 
