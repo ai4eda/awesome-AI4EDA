@@ -268,7 +268,7 @@ def get_pub_md(context, config):
 
         if group_by_year:
             for pub in pubs:
-                m = re.search('(\d{4})', pub['year'])
+                m = re.search(r'(\d{4})', pub['year'])
                 assert m is not None
                 pub['year_int'] = int(m.group(1))
 
@@ -349,7 +349,7 @@ def get_pub_latex(context, config):
             if config['name'] in new_auth:
                 new_auth = r"\textbf{" + new_auth + r"}"
             new_auth = new_auth.replace('. ', '.~')
-            new_auth = '\mbox{' + new_auth + '}'
+            new_auth = r'\mbox{' + new_auth + '}'
             formatted_authors.append(new_auth)
         return formatted_authors
 
@@ -380,7 +380,7 @@ def get_pub_latex(context, config):
         links = ' '.join(links)
 
         highlight = 'selected' in pub and pub['selected'].lower() == 'true'
-        highlight_color = '\cellcolor{tab_highlight}' if highlight else ''
+        highlight_color = r'\cellcolor{tab_highlight}' if highlight else ''
         if '_note' in pub:
             # note_str = r'{} && \textbf{{{}}} \\'.format(
             note_str = f"({pub['_note']})"
@@ -420,7 +420,7 @@ def get_pub_latex(context, config):
 
     if group_by_year:
         for pub in pubs:
-            m = re.search('(\d{4})', pub['year'])
+            m = re.search(r'(\d{4})', pub['year'])
             assert m is not None
             pub['year_int'] = int(m.group(1))
 
@@ -472,7 +472,7 @@ def add_repo_data(context, config):
         assert 'year' in item
         assert 'github' in item['repo_url']
 
-        short_name = re.search('.*github\.com/(.*)', item['repo_url'])[1]
+        short_name = re.search(r'.*github\.com/(.*)', item['repo_url'])[1]
         if 'name' not in item:
             item['name'] = short_name
 
@@ -661,7 +661,7 @@ MARKDOWN_CONTEXT = RenderContext(
         (r'\.~', '. '),  # spaces
         (r'\\ ', ' '),  # spaces
         (r'\\&', '&'),  # unescape &
-        (r'\\\$', '\$'),  # unescape $
+        (r'\\\$', r'\$'),  # unescape $
         (r'\\%', '%'),  # unescape %
         (r'\\textbf{(.*)}', r'**\1**'),  # bold text
         (r'\{ *\\bf *(.*)\}', r'**\1**'),
