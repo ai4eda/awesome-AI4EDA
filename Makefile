@@ -23,16 +23,16 @@ endif
 
 .PHONY: all public viewpdf stage jekyll push clean
 
-all: $(PDF) $(MD)
+all: $(MD)
 
 $(BUILD_DIR):
 	mkdir -p $(BUILD_DIR)
 
 public: $(BUILD_DIR) $(TEMPLATES) $(YAML_FILES) generate.py
-	./generate.py -m pub.yaml
+	source web-ai4eda/Scripts/activate && python generate.py -m pub.yaml
 
 $(TEX) $(MD): $(TEMPLATES) $(YAML_FILES) generate.py publications/*.bib
-	./generate.py -m $(YAML_FILES)
+	source web-ai4eda/Scripts/activate && python generate.py -m $(YAML_FILES)
 
 # $(PDF): $(TEX)
 # 	# TODO: Hack for biber on OSX.
@@ -42,7 +42,7 @@ $(TEX) $(MD): $(TEMPLATES) $(YAML_FILES) generate.py publications/*.bib
 # 	latexmk -c -cd $(BUILD_DIR)/pub
 
 md: $(BUILD_DIR) $(TEMPLATES) $(YAML_FILES) generate.py
-	./generate.py -m pub.yaml
+	source web-ai4eda/Scripts/activate && python generate.py -m pub.yaml
 	cp $(MD) $(WEBSITE_MD)
 	date +%Y-%m-%d > $(WEBSITE_DATE)
 
@@ -74,9 +74,9 @@ jekyll: stage
 # 	git -C $(WEBSITE_DIR) push
 
 push: stage
-	git -C $(WEBSITE_DIR) add $(WEBSITE_MD) $(WEBSITE_DATE)
-	git -C $(WEBSITE_DIR) commit -m "Update pub."
-	git -C $(WEBSITE_DIR) push
+	cd $(WEBSITE_DIR) && git add _includes/pub.md _includes/last-updated.txt
+	cd $(WEBSITE_DIR) && git commit -m "Update pub."
+	cd $(WEBSITE_DIR) && git push
 
 
 clean:

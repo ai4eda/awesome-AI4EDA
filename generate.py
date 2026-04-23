@@ -162,7 +162,7 @@ def get_pub_md(context, config):
 '''
 
     def load_and_replace(bibtex_file):
-        with open(os.path.join('publications', bibtex_file), 'r') as f:
+        with open(os.path.join('publications', bibtex_file), 'r', encoding='utf-8') as f:
             # after bibtexparser 1.4
             parser = BibTexParser()
             parser.customization = bc.author
@@ -202,32 +202,33 @@ def get_pub_md(context, config):
                 prefix = config['prefix']
 
             if group_by_topic:
-                all_topics = []
+                all_topics = {}
                 for pub in pubs:
                     if 'topic' in pub.keys():
                         topic = pub['topic']
                     else:
                         topic = ''
-                    pub['topic_lower'] = topic.lower().strip()
-                    all_topics.append(pub['topic_lower'])
+                    topic_lower = topic.lower().strip()
+                    if topic_lower not in all_topics:
+                        all_topics[topic_lower] = topic.strip()
+                    pub['topic_lower'] = topic_lower
 
                 details = ''
-                all_topics = list(set(all_topics))
                 all_topics_pubs = []
-                for topic in all_topics:
+                for topic_lower, original_topic in all_topics.items():
                     topic_pubs = []
                     for pub in pubs:
-                        if pub['topic_lower'] == topic:
+                        if pub['topic_lower'] == topic_lower:
                             topic_pubs.append(pub)
                     all_topics_pubs.append({
-                            'topic': topic,
+                            'topic': original_topic,
                             'topic_pubs': topic_pubs
                         })
 
                 for topic_pubs_item in all_topics_pubs:
                     topic = topic_pubs_item['topic']
                     topic_pubs = topic_pubs_item['topic_pubs']
-                    details += f'<h3>{topic.title()}</h3>\n'
+                    details += f'<h3>{topic}</h3>\n'
                     details += '<table class="table table-hover">\n'
                     sep = "\n"
                     if sort_bib:
@@ -344,7 +345,7 @@ def get_pub_latex(context, config):
             if len(k) > 0:
                 assert len(k) == 1, k
                 url = author_urls[k[0]]
-                new_auth = f"\href{{{url}}}{{{new_auth}}}"
+                new_auth = rf"\href{{{url}}}{{{new_auth}}}"
 
             if config['name'] in new_auth:
                 new_auth = r"\textbf{" + new_auth + r"}"
