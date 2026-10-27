@@ -95,7 +95,7 @@ categories_publications:
   name: "All publications"
   categories:
     -
-      heading: "High Level Synthesis"
+      heading: "High Level Synthesis, System, and Architecture"
       file: hls.bib
     -
       heading: "Logic Synthesis"
